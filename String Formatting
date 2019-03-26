@@ -1,0 +1,11 @@
+st1="{} {} {} {} {}".format('String', 'in', 'Python', 'is', 'immutable')
+print(st1)
+##output:String in Python is immutable
+
+st2="{1} {4} {0} {2} {3}".format('String', 'in', 'Python', 'is', 'immutable')
+print(st1)
+##output:in immutable String Python is
+
+str3="{s} {i} {i3} {i2} {p}".format(s = 'String', i = 'in', p = 'python', i2='is', i3='immutble') 
+print(String1) 
+##output: String is immutble in python
