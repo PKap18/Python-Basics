@@ -1,0 +1,42 @@
+##Consider an input a5c4b9c1a2 then output should be a7b9c5.
+
+def checkString(s):
+
+    dict = {}
+    mylist= list(s)
+    lastChar = ''
+    repeat='NO'
+    for x in mylist:
+        if x.isdigit() == True:
+            index=len(dict[lastChar])-1
+            if lastChar !='' and lastChar.isalpha() == True:
+                if repeat =='YES':
+                    dict[lastChar].append('')
+                    index+=1
+                if lastChar in dict.keys():
+                    dict[lastChar][index]=dict[lastChar][index]+x
+        else:
+            lastChar = x
+            if lastChar not in dict.keys():
+                dict.update({x:['']})
+                repeat='NO'
+            else:
+                repeat='YES'
+      
+    resultstring=''
+    for i in sorted(dict):
+        resultstring = resultstring + i
+        sum=0
+        for value in dict[i]:
+            if value != '':
+                sum = sum + int(value)
+        resultstring = resultstring + str(sum)   
+
+    print("resultstring=" + resultstring)
+
+
+def main():
+    s=input()
+    checkString(s)
+    
+main()
