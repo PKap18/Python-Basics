@@ -1,0 +1,10 @@
+##Test the law of large number for N random numbers which are normally distributed with mean =0 and stdev=1. 
+##Write py code to check count of nos lying between 1 and -1 and E(x)=68.2%. Check Mean(xn)->E(X)
+import numpy as np
+from numpy.random import randn
+count=0
+for i in randn(105):
+    if(i<=1 and i>=-1):
+        count=count+1
+Count_percent = (count/100)*100
+print(Count_percent)
