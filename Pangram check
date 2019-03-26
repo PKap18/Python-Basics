@@ -1,3 +1,6 @@
+##checks if the input string is a pangram or not. Pangram, if the input contains all the english alphabets(all 26 alphabets) 
+##then yes pangram else print the characters which are missing and if had been present the string would have become a pangram.
+
 def is_pangram(phrase):
     alphabet = "abcdefghijklmnopqrstuvwxyz"
     newStr=''
