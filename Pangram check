@@ -1,0 +1,20 @@
+def is_pangram(phrase):
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    newStr=''
+    counter=0
+    for char in alphabet:
+        if char not in phrase:
+            newStr=newStr+char 
+            counter =-1
+            
+    if counter==0:
+        print("NULL")
+    else:
+        print(newStr)
+
+
+def main():
+    phrase=input()
+    is_pangram(phrase)
+    
+main()
